@@ -9,5 +9,5 @@ services:
       - "traefik.enable=true" 
       - "traefik.docker.network=frontend"
       - "traefik.http.routers.test_machine.tls.certresolver=myresolver"
-      - "traefik.http.services.test_machine.loadbalancer.server.port=8000"
+      - "traefik.http.services.test_machine.loadbalancer.server.port=8001"
       - "traefik.http.routers.test_machine.rule=Host(`$DOMAIN`)"
