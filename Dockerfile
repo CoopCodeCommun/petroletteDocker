@@ -7,4 +7,4 @@ WORKDIR /petrolette
 ENV TZ "Europe/Paris"
 ENV PATH "/usr/bin/:${PATH}"
 
-CMD ["npm", "start", "&&", "tail", "-f", "/dev/null"] 
+# CMD ["npm", "start", "&&", "tail", "-f", "/dev/null"] 
