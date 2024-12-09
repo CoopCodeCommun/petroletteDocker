@@ -7,4 +7,5 @@ WORKDIR /petrolette
 ENV TZ "Europe/Paris"
 ENV PATH "/usr/bin/:${PATH}"
 
-CMD ["npm", "start"] 
+ENV NODE_ENV "production"
+CMD ["node", "./http/server.js"] 
