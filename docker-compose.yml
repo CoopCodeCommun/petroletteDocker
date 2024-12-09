@@ -1,11 +1,7 @@
 services:
   petrolette:
     build: .
-    # image: petrolette
-    # ports:
-      # - "8000:8000"
     labels:
-      # requiered
       - "traefik.enable=true" 
       - "traefik.docker.network=frontend"
       - "traefik.http.routers.test_machine.tls.certresolver=myresolver"
