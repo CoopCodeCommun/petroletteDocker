@@ -1,6 +1,7 @@
 services:
   petrolette:
-    image: petrolette
+    build: .
+    # image: petrolette
     # ports:
       # - "8000:8000"
     labels:
