@@ -7,4 +7,4 @@ services:
       - "traefik.http.routers.test_machine.tls.certresolver=myresolver"
       - "traefik.http.services.test_machine.loadbalancer.server.port=8000"
       - "traefik.http.routers.test_machine.rule=Host(`$DOMAIN`)"
-    command: "npm start && tail -f /dev/null"
+    command: "npm start && echo 'ok' && tail -f /dev/null"
