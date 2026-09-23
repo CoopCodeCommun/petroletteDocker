@@ -1,12 +1,18 @@
 services:
   petrolette:
+    restart: unless-stopped
     build: .
-    # ports:
-      # - 8010:8000
-    labels:
-      - "traefik.enable=true" 
-      - "traefik.docker.network=frontend"
-      - "traefik.http.routers.test_machine.tls.certresolver=myresolver"
-      - "traefik.http.services.test_machine.loadbalancer.server.port=8000"
-      - "traefik.http.routers.test_machine.rule=Host(`$DOMAIN`)"
-    command: "bash start.sh"
+    ports:
+      - 8010:8788          # en local ; à retirer sur le serveur derrière Traefik
+#    networks:
+#      - frontend
+#    labels:
+#      - "traefik.enable=true"
+#      - "traefik.docker.network=frontend"
+#      - "traefik.http.routers.petrolette.rule=Host(`$DOMAIN`)"
+#      - "traefik.http.routers.petrolette.tls.certresolver=myresolver"
+#      - "traefik.http.services.petrolette.loadbalancer.server.port=8788"
+
+#networks:
+#  frontend:
+#    external: true
